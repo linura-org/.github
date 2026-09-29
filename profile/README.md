@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/linura-profile-banner.svg" alt="Linura — The intelligent system layer for Linux." width="100%">
+  <img src="https://linura.org/images/linura-full.png" alt="Linura — full brand mark with Linux penguin." width="100%">
 </p>
 
 <p align="center"><strong>Tell your computer what you want it to become.</strong></p>
