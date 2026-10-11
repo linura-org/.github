@@ -25,10 +25,12 @@ Linura is an intent-driven system layer for Linux. Humans and AI agents can desc
 
 The intelligence layer may be probabilistic. **Machine authority is not.**
 
+Only managed external effects follow this complete lifecycle (`ManagedExternalEffect`):
+
 ```text
-human / agent intent
+human / agent proposal
         ↓
-      propose
+   request / intent
         ↓
 observe → plan → validate → authorize → prepare
         ↓
@@ -36,6 +38,8 @@ execute → verify → commit → audit → reconcile
         ↓
  verified machine state
 ```
+
+Other operations follow class-appropriate paths: queries and local actions stay typed and non-external; qualified `TransientExternalEffect` operations use an unprivileged, plan-bound path with independent verification and audit, without managed durable recovery. See the [action lifecycle](https://github.com/linura-org/linura/blob/main/docs/action-lifecycle.md).
 
 **Agents propose. Linura decides and executes.**
 
